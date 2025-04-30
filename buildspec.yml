@@ -9,8 +9,8 @@ phases:
   build:
     commands:
       - echo "Starting Databricks Deployment..."
-      - export DATABRICKS_HOST="https://dbc-5f99fc48-0975.cloud.databricks.com"
-      - export DATABRICKS_TOKEN="dapie6e44bd23367fa14cb92cc95cf048cb"
+      - export DATABRICKS_HOST="https://dbc-19dd5697-db5b.cloud.databricks.com"
+      - export DATABRICKS_TOKEN="dapied254a643e30617a3526aa324911c84a"
       - echo "Deleting existing script..."
       - databricks workspace delete /Workspace/path || true
       - echo "Importing new script..."
