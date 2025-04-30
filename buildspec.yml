@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.x
+    commands:
+      - pip install databricks-cli
+  build:
+    commands:
+      - echo "Starting Databricks Deployment..."
+      - databricks configure --host https://dbc-5f99fc48-0975.cloud.databricks.com --token dapie6e44bd23367fa14cb92cc95cf048cb
+      - databricks workspace import script.py /Workspace/path --language PYTHON
+      - echo "Deployment Complete!"
