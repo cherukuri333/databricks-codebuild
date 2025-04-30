@@ -9,6 +9,7 @@ phases:
   build:
     commands:
       - echo "Starting Databricks Deployment..."
-      - databricks configure --host https://dbc-5f99fc48-0975.cloud.databricks.com --token dapie6e44bd23367fa14cb92cc95cf048cb
+      - export DATABRICKS_HOST="https://dbc-5f99fc48-0975.cloud.databricks.com"
+      - export DATABRICKS_TOKEN="dapie6e44bd23367fa14cb92cc95cf048cb"
       - databricks workspace import script.py /Workspace/path --language PYTHON
       - echo "Deployment Complete!"
